@@ -20,10 +20,16 @@
 
 make_phrase <- function(num, num_word, item, verb, adjective, location){
 
+
   verb <- str_replace_na(verb, "")
+  adjective <- str_replace_na(adjective, "")
+  location <- str_replace_na(location, "")
 
-  #????
-
+  return(
+    str_c(num_word, adjective, item, verb, location, sep=" ") %>%
+      str_replace_all("  ", " ") %>%
+      str_replace_all(" $", "")
+  )
 
 }
 

@@ -10,10 +10,13 @@
 #' @import purrr
 #'
 #' @export
+
 pluralize_gift <- function(gift){
 
 gift <- gift %>%
-  str_replace()
+  str_replace("y$", "ie") %>%
+  str_c("s")
+
 
 return(gift)
 

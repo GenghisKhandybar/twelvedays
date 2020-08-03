@@ -13,11 +13,27 @@
 #' @import purrr
 #'
 #' @export
+
+
+
 sing_day <- function(dataset, line, phrase_col){
 
   phrases <- dataset %>% pull({{phrase_col}})
 
-  #????
+  day_word <- dataset$Day.in.Words[line]
 
+
+  all_gifts <- phrases[1:line] %>%
+    map(str_c, sep = "\n", collapse=NULL) %>%
+    unlist() %>%
+    str_c(collapse=NULL)
+
+  start <- glue("On the {day_word} day of Christmas, my true love sent to me,")
+  ans1 <- paste(all_gifts[line:1],collapse = ", ")
+  ans <- paste(start, ans1)
+  return(ans)
 
 }
+
+
+sing_day(xmas,5,Full.Phrase)
