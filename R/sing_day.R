@@ -28,7 +28,7 @@ sing_day <- function(dataset, line, phrase_col){
     unlist() %>%
     str_c(collapse=NULL)
 
-  start <- glue("\nOn the {day_word} day of Christmas, my true love sent to me,")
+  start <- glue("On the {day_word} day of Christmas, my true love sent to me,")
   if(line==1){
     ans <- paste(all_gifts[1],collapse = "\n")
   } else{
@@ -37,6 +37,7 @@ sing_day <- function(dataset, line, phrase_col){
     ans <- paste(ans, all_gifts[1], collapse = "\n")
   }
   ans <- paste(c(start, ans), collapse = "\n")
+  ans <- paste(ans, "\n")
   return(ans)
 
 }
