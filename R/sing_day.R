@@ -34,5 +34,3 @@ sing_day <- function(dataset, line, phrase_col){
   return(ans)
 
 }
-
-cat(sing_day(xmas,5,Full.Phrase))
