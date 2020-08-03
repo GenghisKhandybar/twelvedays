@@ -33,7 +33,7 @@ sing_day <- function(dataset, line, phrase_col){
     ans <- paste(all_gifts[1],collapse = "\n")
   } else{
     ans <- paste(all_gifts[line:2],collapse = "\n")
-    ans <- paste(ans, "andTEST ")
+    ans <- paste(ans, "and ")
     ans <- paste(ans, all_gifts[1], collapse = "\n")
   }
   ans <- paste(c(start, ans), collapse = "\n")

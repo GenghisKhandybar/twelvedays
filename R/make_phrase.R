@@ -20,9 +20,9 @@
 
 make_phrase <- function(num, item, verb, adjective, location){
   #Instead of taking num_word as a parameter, it is automatically
-  #generated here. This is suited to the task as the word for one
-  #can only be replaced with "and a" this way.
-  nums <- c("and a", "two", "three", "four", "five", "six", "seven",
+  #generated here. I originally was using this to switch "one"
+  # for "and a", though that wasn't actually optimal.
+  nums <- c("one", "two", "three", "four", "five", "six", "seven",
             "eight", "nine", "ten", "eleven", "twelve")
   num_word <- nums[num]
 
