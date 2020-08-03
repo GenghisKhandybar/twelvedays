@@ -15,7 +15,8 @@ pluralize_gift <- function(gift){
 
 gift <- gift %>%
   str_replace("y$", "ie") %>%
-  str_c("s")
+  str_c("s") %>%
+  str_replace("gooses", "geese")
 
 
 return(gift)
