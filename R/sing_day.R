@@ -29,11 +29,10 @@ sing_day <- function(dataset, line, phrase_col){
     str_c(collapse=NULL)
 
   start <- glue("On the {day_word} day of Christmas, my true love sent to me,")
-  ans1 <- paste(all_gifts[line:1],collapse = ", ")
-  ans <- paste(start, ans1)
+  ans1 <- paste(all_gifts[line:1],collapse = "\n")
+  ans <- paste(c(start, ans1), collapse = "\n")
   return(ans)
 
 }
 
-
-sing_day(xmas,5,Full.Phrase)
+cat(sing_day(xmas,5,Full.Phrase))
